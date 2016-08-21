@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flight Search</title>
+        <link rel="stylesheet" href="styles/bootstrap.css">
+    </head>
+    <body ng-app="app"> 
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">Flight Search</div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div ng-controller="flightsController as vm">
+                `
+                <table class="table table-responsive table-striped">                    
+                    <tr ng-repeat="flight in vm.searchResults">
+                        <td>{{flight.id}}</td>
+                        <td>{{flight.flightNumber.number}}</td>
+                        <td>{{flight.localDepartureTime | date: 'MM-dd-yyyy HH:mm'}}</td>
+                        <td><a href="#" class="btn btn-sm btn-primary">Details</a></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/angular-resource.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/common/services/common.services.module.js"></script>
+        <script src="app/common/services/dataService.js"></script>
+        <script src="app/flightsController.js"></script>
+
+    </body>
+
+</html>
