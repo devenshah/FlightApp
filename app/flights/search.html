@@ -1,10 +1,56 @@
-<div>                
-    <table class="table table-responsive table-striped">                    
-        <tr ng-repeat="flight in vm.searchResults">
-            <td>{{flight.id}}</td>
-            <td>{{flight.flightNumber.number}}</td>
-            <td>{{flight.localDepartureTime | date: 'MM-dd-yyyy HH:mm'}}</td>
-            <td><a href="#/flightdetails/{{flight.id}}" class="btn btn-sm btn-primary">Details</a></td>
-        </tr>
-    </table>
+<div>
+    <form class="form-horizontal" name="productForm" novalidate>
+        <fieldset>
+            <legend>Search flights</legend>
+            <div class="form-group" >
+                <label class="col-md-2 control-label"
+                   for="inputOriginAirport">Select Origin Airport</label>
+
+                <div class="col-md-4">
+                    <input class="form-control"
+                        id="inputOriginAirport"
+                        name="inputOriginAirport"
+                        type="text"
+                        placeholder="Origin Airport Name (required)"
+                        ng-model="vm.filter.originAirport"
+                        required/>
+                </div>
+            </div>
+            <div class="form-group" >
+                <label class="col-md-2 control-label"
+                   for="inputDestinationAirport">Select Destination Airport</label>
+
+                <div class="col-md-4">
+                    <input class="form-control"
+                        id="inputDestinationAirport"
+                        name="inputDestinationAirport"
+                        type="text"
+                        placeholder="Destination Airport Name (required)"
+                        ng-model="vm.filter.destinationAirport"
+                        required/>
+                </div>
+            </div>
+            <div class="form-group" >
+                <label class="col-md-2 control-label"
+                   for="inputDepartingDate">Select Date Of Departure</label>
+
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input class="form-control"
+                            id="inputDepartingDate"
+                            type="text"
+                            datepicker-popup="MMM dd, yyyy "
+                            is-open="vm.opened"
+                            ng-model="vm.filter.departingDate"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"
+                                ng-click="vm.open($event)">
+                            <i class="glyphicon glyphicon-calendar"/>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+    </form>
 </div>
+<search-results/>
