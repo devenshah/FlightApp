@@ -20,7 +20,7 @@
                 templateUrl: "app/flights/search.html",
                 controller: "SearchController as vm"
             })
-            .when("/flightdetails/:id", 
+            .when("/flightdetails/:flightid", 
             {
                 templateUrl: "app/flights/details.html",
                 controller: "DetailsController as vm"

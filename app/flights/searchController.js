@@ -10,9 +10,8 @@
         var vm = this;
         vm.title = 'Flight List';
          
-        dataService.query(function (data) {
-            vm.searchResults = data;
-        });
+        vm.searchResults = 
+            dataService.query();
     }
 
 })();

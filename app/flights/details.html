@@ -1,17 +1,15 @@
 <div>
     <h1>{{vm.title}}</h1>
-    <div class="row">        
+    <div class="row">    
         <div class="col-md-2">
-            From
-            <div>
-                {{vm.flightDetail.departureAirport}}
-            </div>
+            Departing From : {{vm.flightDetail.departureAirport}}
+            on {{vm.flightDetail.localDepartureTime | date: 'MM-dd-yyyy HH:mm'}}
         </div>
         <div class="col-md-2">
-            To
-            <div>
-                {{vm.flightDetail.arrivalAirport}}
-            </div>
+            Arriving at : {{vm.flightDetail.arrivalAirport}}
+            on {{vm.flightDetail.localArrivalTime | date: 'MM-dd-yyyy HH:mm'}}
         </div>
     </div>
 </div>
+
+<a href="#">Back to Search</a>

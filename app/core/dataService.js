@@ -9,7 +9,7 @@
               dataService]);
     
     function dataService($resource, appSettings){
-        return $resource(appSettings.dataUrl);
+        return $resource(appSettings.dataUrl, {'id': '@id'});
     } 
         
 })();
