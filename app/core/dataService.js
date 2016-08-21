@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module("core")
+        .module("flightApp.core")
         .factory("dataService",
              ["$resource",
               "appSettings",

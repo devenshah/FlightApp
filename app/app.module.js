@@ -2,13 +2,13 @@
     'use strict'
 
     var main = angular
-        .module('app', [            
+        .module('flightApp', [            
             'ngRoute',
-            'flights'
+            'flightApp.flights'
         ])
         .constant("appSettings",         
         {
-            dataUrl: "http://ejtestbed.herokuapp.com/flights"
+            dataUrl: "http://ejtestbed.herokuapp.com/flights/:id"
         });
         
     main.config(routeConfig);
@@ -18,7 +18,7 @@
             .when("/searchFlights", 
             {
                 templateUrl: "app/flights/search.html",
-                controller: "searchController as vm"
+                controller: "SearchController as vm"
             })
             .otherwise("/searchFlights");
     }

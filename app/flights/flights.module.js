@@ -2,6 +2,6 @@
     "use strict";
 
     angular
-        .module("flights", 
-            ['core']);
+        .module("flightApp.flights", 
+            ['flightApp.core']);
 })();

@@ -2,8 +2,8 @@
     "use strict";
 
     angular
-        .module('flights')
-        .controller('searchController',
+        .module('flightApp.flights')
+        .controller('SearchController',
             ['dataService', searchController]);
     
     function searchController(dataService){

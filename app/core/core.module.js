@@ -1,5 +1,5 @@
 (function(){
     angular
-        .module('core', 
+        .module('flightApp.core', 
             ['ngResource']);
 })();
