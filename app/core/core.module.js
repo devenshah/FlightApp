@@ -1,5 +1,5 @@
 (function(){
     angular
-        .module('common.services', 
+        .module('core', 
             ['ngResource']);
 })();

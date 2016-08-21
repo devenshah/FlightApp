@@ -14,24 +14,14 @@
         </nav>
 
         <div class="container">
-            <div ng-controller="searchController as vm">
-                `
-                <table class="table table-responsive table-striped">                    
-                    <tr ng-repeat="flight in vm.searchResults">
-                        <td>{{flight.id}}</td>
-                        <td>{{flight.flightNumber.number}}</td>
-                        <td>{{flight.localDepartureTime | date: 'MM-dd-yyyy HH:mm'}}</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Details</a></td>
-                    </tr>
-
-                </table>
-            </div>
+            <ng-view></ng-view>            
         </div>
 
         <script src="scripts/angular.js"></script>
         <script src="scripts/angular-resource.js"></script>
-        <script src="app/common/services/common.services.module.js"></script>
-        <script src="app/common/services/dataService.js"></script>
+        <script src="scripts/angular-route.js"></script>
+        <script src="app/core/core.module.js"></script>
+        <script src="app/core/dataService.js"></script>
         <script src="app/flights/flights.module.js"></script>
         <script src="app/flights/searchController.js"></script>
         <script src="app/app.module.js"></script>

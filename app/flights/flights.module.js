@@ -3,5 +3,5 @@
 
     angular
         .module("flights", 
-            ['common.services']);
+            ['core']);
 })();

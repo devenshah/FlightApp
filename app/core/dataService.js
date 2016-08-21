@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module("common.services")
+        .module("core")
         .factory("dataService",
              ["$resource",
               "appSettings",
