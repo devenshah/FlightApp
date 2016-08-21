@@ -11,7 +11,6 @@
     function dataService($resource, appSettings){
         return $resource(appSettings.dataUrl);
     } 
-
-    
+        
 })();
 

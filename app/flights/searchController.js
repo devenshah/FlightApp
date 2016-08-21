@@ -2,10 +2,11 @@
     "use strict";
 
     angular
-        .module('app')
-        .controller('flightsController', ['dataService', flightsController]);
+        .module('flights')
+        .controller('searchController',
+            ['dataService', searchController]);
     
-    function flightsController(dataService){
+    function searchController(dataService){
         var vm = this;
         vm.title = 'Flight List';
          

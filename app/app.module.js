@@ -3,7 +3,7 @@
 
     angular
         .module('app', [
-            'common.services'
+            'flights'
         ])
         .constant("appSettings",         
         {
