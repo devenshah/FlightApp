@@ -20,6 +20,11 @@
                 templateUrl: "app/flights/search.html",
                 controller: "SearchController as vm"
             })
+            .when("/flightdetails/:id", 
+            {
+                templateUrl: "app/flights/details.html",
+                controller: "DetailsController as vm"
+            })
             .otherwise("/searchFlights");
     }
     

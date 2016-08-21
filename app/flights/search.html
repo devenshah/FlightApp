@@ -4,7 +4,7 @@
             <td>{{flight.id}}</td>
             <td>{{flight.flightNumber.number}}</td>
             <td>{{flight.localDepartureTime | date: 'MM-dd-yyyy HH:mm'}}</td>
-            <td><a href="#" class="btn btn-sm btn-primary">Details</a></td>
+            <td><a href="#/flightdetails/:{{flight.id}}" class="btn btn-sm btn-primary">Details</a></td>
         </tr>
     </table>
 </div>
