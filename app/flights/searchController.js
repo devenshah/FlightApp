@@ -9,9 +9,12 @@
     function searchController(dataService){
         var vm = this;
         vm.title = 'Flight List';
-         
-        vm.searchResults = 
-            dataService.query();
+
+        vm.dateFilter = moment().format('DD-MMMM-YYYY');        
+ 
+        vm.search = function (){
+            vm.searchResults = dataService.query();
+        }
     }
 
 })();
