@@ -1,9 +1,9 @@
-<div class="row">
 <table class="table table-hover table-striped">
     <tr>
         <th>Flight #</th>
         <th>Departs</th>
         <th>On</th>
+        <th>Seats Available</th>
         <th>Price</th>        
     </tr>
     <tr ng-repeat="flight in vm.searchResults">
@@ -14,12 +14,13 @@
         </td>
         <td>{{flight.departureAirport}}</td>
         <td>{{flight.localDepartureTime | date: 'dd/MM/yyyy'}} at {{flight.localDepartureTime | date: 'hh:mm'}}</td>
-        <td>
-            {{flight.prices.adult.value}} 
+        <td class="centerAlign>
             <span class="badge" data-toggle="tooltip" title="Seats Available">
                 {{flight.seatsAvailable}}
             </span>
+        </td>        
+        <td>
+            {{flight.prices.adult.value}} 
         </td>
     </tr>
 </table>
-</div>
