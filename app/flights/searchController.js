@@ -12,6 +12,8 @@
 
         vm.dateFilter = moment().format('DD-MMMM-YYYY');        
  
+        vm.searchResults = dataService.query();
+
         vm.search = function (){
             vm.searchResults = dataService.query();
         }

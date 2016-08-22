@@ -1,10 +1,25 @@
-<div>                
-    <table class="table table-responsive table-striped">                    
-        <tr ng-repeat="flight in vm.searchResults">
-            <td>{{flight.id}}</td>
-            <td>{{flight.flightNumber.number}}</td>
-            <td>{{flight.localDepartureTime | date: 'dd-MM-yyyy HH:mm'}}</td>
-            <td><a href="#/flightdetails/{{flight.id}}" class="btn btn-sm btn-primary">Details</a></td>
-        </tr>
-    </table>
+<div class="row">
+<table class="table table-hover table-striped">
+    <tr>
+        <th>Flight #</th>
+        <th>Departs</th>
+        <th>On</th>
+        <th>Price</th>        
+    </tr>
+    <tr ng-repeat="flight in vm.searchResults">
+        <td>
+            <a href="#/flightdetails/{{flight.id}}">
+                {{flight.flightNumber.carrierCode}} {{flight.flightNumber.number}}
+            </a>                
+        </td>
+        <td>{{flight.departureAirport}}</td>
+        <td>{{flight.localDepartureTime | date: 'dd/MM/yyyy'}} at {{flight.localDepartureTime | date: 'hh:mm'}}</td>
+        <td>
+            {{flight.prices.adult.value}} 
+            <span class="badge" data-toggle="tooltip" title="Seats Available">
+                {{flight.seatsAvailable}}
+            </span>
+        </td>
+    </tr>
+</table>
 </div>

@@ -1,27 +1,33 @@
 <div>
-    <form class="form-horizontal" name="productForm" novalidate>
-        <fieldset>
-            <legend>Search Flight Deals</legend>            
-            <div class="form-group" >
-                <label class="col-md-2 control-label"
-                   for="inputDepartingDate">Departure Date</label>
+    <h1>Flight Deals</h1>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" name="productForm" novalidate>
+                <fieldset>
+                    <div class="form-group" >
+                        <label class="col-md-2 control-label"
+                        for="inputDepartingDate">Departure Date</label>
 
-                <div class="col-md-4">
-                    <input class="form-control" type="text" 
-                        id="inputDepartingDate" ng-model="vm.dateFilter"/>                    
-                </div>
-            </div>
-        </fieldset>
-        <div class="col-md-offset-2">
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" 
+                                id="inputDepartingDate" ng-model="vm.dateFilter"/>                    
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="panel-footer">
             <input type="submit" ng-click="vm.search()" 
                 class="btn btn-primary" value="Search" />
         </div>
-    </form>
+    </div>
 </div>
-<fieldset>
-    <legend>Search Results</legend>
-    <search-results/>
-</fieldset>
+<div class="panel panel-default">
+    <div class="panel-heading">Search Results</div>
+    <div class="panel-body">
+        <search-results/>
+    </div>
+</div>
 <script>
     $(document).ready(function() {
         $( "#inputDepartingDate" )
