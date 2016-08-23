@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xotic Deals</title>
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/jquery-ui.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body ng-app="flightApp"> 
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">Xotic Deals</div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <ng-view></ng-view>            
+        </div>
+
+        <script src="scripts/jquery-3.1.0.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <script src="scripts/jquery-ui.js"></script>
+        <script src="scripts/moment.js"></script>        
+        <script src="scripts/angular/angular.js"></script>
+        <script src="scripts/angular/angular-resource.js"></script>
+        <script src="scripts/angular/angular-route.js"></script>
+        <script src="app/core/core.module.js"></script>
+        <script src="app/core/dataService.js"></script>
+        <script src="app/flights/flights.module.js"></script>
+        <script src="app/flights/resultsDirective.js"></script>
+        <script src="app/flights/searchController.js"></script>
+        <script src="app/flights/detailsController.js"></script>
+        <script src="app/app.module.js"></script>
+
+    </body>
+
+</html>

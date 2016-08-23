@@ -1,0 +1,47 @@
+<div>
+    <h1>Flight Deals</h1>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" name="productForm" novalidate>
+                <fieldset>
+                    <div class="form-group" >
+                        <label class="col-md-2" class="control-label"
+                            for="slider-range">Max Price</label>
+                        
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" ng-model="vm.maxPrice">                            
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="panel-footer">
+            <input type="submit" ng-click="vm.search()" 
+                class="btn btn-primary" value="Search" />
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Search Results</div>
+    <div class="panel-body">
+        <search-results/>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [ 25, 75 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+            " - " + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+
+    
+ </script>
