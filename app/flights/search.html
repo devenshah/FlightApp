@@ -5,12 +5,11 @@
             <form class="form-horizontal" name="productForm" novalidate>
                 <fieldset>
                     <div class="form-group" >
-                        <label class="col-md-2 control-label"
-                        for="inputDepartingDate">Departure Date</label>
-
-                        <div class="col-md-4">
-                            <input class="form-control" type="text" 
-                                id="inputDepartingDate" ng-model="vm.dateFilter"/>                    
+                        <label class="col-md-2" class="control-label"
+                            for="slider-range">Max Price</label>
+                        
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" ng-model="vm.maxPrice">                            
                         </div>
                     </div>
                 </fieldset>
@@ -30,7 +29,19 @@
 </div>
 <script>
     $(document).ready(function() {
-        $( "#inputDepartingDate" )
-            .datepicker({dateFormat: "dd-MM-yy"});
+
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [ 25, 75 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+            " - " + $( "#slider-range" ).slider( "values", 1 ) );
     });
+
+    
  </script>

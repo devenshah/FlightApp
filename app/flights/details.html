@@ -3,7 +3,7 @@
     <div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <span class="glyphicons glyphicons-plane"></span> {{vm.flightDetail.departureAirport}} to {{vm.flightDetail.arrivalAirport}} on {{vm.flightDetail.localDepartureTime | date: 'EEEE d MMMM yyyy'}}
+                <i class="glyphicon glyphicon-plane"></i> {{vm.flightDetail.departureAirport}} to {{vm.flightDetail.arrivalAirport}} on {{vm.flightDetail.localDepartureTime | date: 'EEEE d MMMM yyyy'}}
             </div>
             <table class="table">
                 <tr>
@@ -14,10 +14,10 @@
                         {{vm.flightDetail.localDepartureTime | date: 'dd/MM hh:mm'}}
                     </td>
                     <td>
-                        <label for="">Terminal</label>                        
+                        <label for="">Carrier</label>
                     </td>
                     <td>
-                        {{vm.flightDetail.depTerminalName}}
+                        {{vm.flightDetail.flightNumber.carrierCode}} {{vm.flightDetail.flightNumber.number}}
                     </td>
                 </tr>
                 <tr>
@@ -28,10 +28,10 @@
                         {{vm.flightDetail.localArrivalTime | date: 'dd/MM hh:mm'}}
                     </td>
                     <td>
-                        <label for="">Carrier</label>
+                        <label for="">Terminal</label>                        
                     </td>
                     <td>
-                        {{vm.flightDetail.flightNumber.carrierCode}} {{vm.flightDetail.flightNumber.number}}
+                        {{vm.flightDetail.depTerminalName}}
                     </td>
                 </tr>
             </table>
