@@ -4,9 +4,9 @@
     angular
         .module('flightApp.flights')
         .controller('DetailsController',
-            ['$routeParams','dataService', '$http', detailsController]);
+            ['$routeParams','dataService', detailsController]);
     
-    function detailsController($routeParams, dataService, $http){
+    function detailsController($routeParams, dataService){
         var vm = this;
         vm.title = 'Flight Details';
         vm.flightId = $routeParams.flightid;

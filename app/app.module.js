@@ -5,11 +5,7 @@
         .module('flightApp', [            
             'ngRoute',
             'flightApp.flights'
-        ])
-        .constant("appSettings",         
-        {
-            dataUrl: "http://ejtestbed.herokuapp.com/flights/:id"
-        });
+        ]);
         
     main.config(routeConfig);
 
