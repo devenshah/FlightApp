@@ -23,7 +23,6 @@
                 }
                 else {
                     $.each(results, function(index, item){
-                        console.log(item.prices.adult.value);
                         if (item.prices.adult.value <= vm.maxPrice){
                             vm.searchResults.push(item);
                         }
