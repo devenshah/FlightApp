@@ -1,0 +1,3 @@
+describe('Search Controller', function(){
+
+});
